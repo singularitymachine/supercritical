@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    {{ $main_options := (dict "targetPath" "css/test.css" "outputStyle" "compressed") }}
+    {{/* {{ $style := resources.Get "test/scss/style.scss" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS $main_options | resources.Fingerprint}}
+    */}}
+    {{ $style := resources.Get "test/scss/style.scss" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS (dict "targetPath" "css/test.css") }}
+
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body class="test2">
+    <div class="bg-test2">
+    </div>
+    <div class="content">
+        <div class="animation">
+            {{ $text := slice "a" "u" "t" "o" "n" "o" "m" "i" "c" "s"}}
+            {{ range $text }}
+                {{ partial "animation" . }}
+            {{ end }}
+        </div>
+        <div class="landing-text">
+            <h2>sigchain capital</h2>
+            <h3>capital as technology</h3>
+            
+        </div>
+    </div>
+</body>
+
+</html>

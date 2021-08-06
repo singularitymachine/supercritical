@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="300"
+   height="300"
+   viewBox="0 0 300 300"
+   version="1.1"
+   id="svg1032">
+  <defs
+     id="defs1026" />
+  <metadata
+     id="metadata1029">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 150,30 c 1.27,0 2.54,0.02 3.81,0.06 0.5,-0.03 1.01,-0.05 1.52,-0.05 C 155.55,30 155.78,30 156,30 h 74 c 22.09,0 40,17.91 40,40 v 50 c -16.57,0 -30,13.43 -30,30 0,16.57 13.43,30 30,30 v 50 c 0,22.09 -17.91,40 -40,40 h -74 c -0.74,0 -1.47,-0.02 -2.19,-0.06 C 152.54,269.98 151.27,270 150,270 83.73,270 30,216.27 30,150 30,83.73 83.73,30 150,30 Z"
+       
+       id="path178"
+       style="" />
+  </g>
+</svg>

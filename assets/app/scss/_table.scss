@@ -1,0 +1,61 @@
+.tx-table-wrapper {
+    overflow: auto;
+    flex: 1 0 auto;
+    table {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    tr {
+        width: 100%;
+        padding: 4px 0;
+        //border: 1px solid blue;
+    }
+    th {
+        padding: 10px 20px;
+    
+    }
+    td {
+        white-space: nowrap; 
+        text-overflow:ellipsis; 
+        overflow: hidden; 
+        width: 100%;
+        max-width:220px;
+        padding: 10px 20px;
+        
+    }
+    
+    td:hover {
+        //max-width: 1000px;
+        width: auto;
+        //overflow: visible;
+        //background: red;
+        //display: block;
+        //text-overflow:unset; 
+    
+    }
+    
+    td:hover > span.s2 {
+        background-color: rgba(151, 151, 151, 0.2);
+        z-index: 200;
+        width: 100%;
+    }
+    
+    td.w1 {
+        max-width: 300px;
+    }
+    
+    td.number {
+        text-align: right;
+    }
+    span.s2 {
+        color: #999;
+    }
+    
+    .xspan.s2:hover {
+        color: blue;
+    
+    }
+}

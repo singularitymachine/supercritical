@@ -1,0 +1,43 @@
+{{ $style := resources.Get "test/scss/style.scss" | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS }}
+<style>
+{{ $style.Content | safeCSS}}
+</style>
+
+<div class="top">
+  <div class="header__wrapper bgcolor__header">
+    <div class="divider">
+      <div class="lmr">
+        {{/*  <h2 class="title">{{ .Title }}</h2>  */}}
+        <div class="animation header-animation">
+          {{ $text := slice "a" "u" "t" "o" "n" "o" "m" "i" "c" "s"}}
+          {{ range $text }}
+          <div class="animation__container">
+            {{ $match := (print "svg/" . "/*") }}
+            {{ $letters := resources.Match  $match }}
+            <ul class="animation__container__list  xanimateletters-{{- len $letters -}}">
+                {{ range first 1 $letters }}
+                <li class="animation__container__list__item">
+                    {{ .Content | safeHTML }}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__wrapper bgcolor__breadcrumb">
+    <div class="divider">
+      <div class="lmr flexbox">
+        {{ if $.Param "enableBreadcrumb" }}
+          {{ partial "main/component/breadcrumb.html" . }}
+        {{ end }}
+        <div class="grow"></div>
+        {{ partial "main/component/toggle-sidebar.html" . }}
+        {{ partial "main/component/edit-this-page.html" . }}
+      </div>
+    </div>
+  </div>
+</div>

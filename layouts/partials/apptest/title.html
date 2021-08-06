@@ -1,0 +1,9 @@
+{{ $a := resources.Get "svg/a/2.svg" }}
+<div class="logo-svg">
+    <a href="/apptest/">
+    {{ $a.Content | safeHTML }}
+    </a>
+</div>
+<div class="logo-name title">
+    sigchain
+</div>

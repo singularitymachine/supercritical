@@ -1,0 +1,162 @@
+{{ define "main" }}
+{{ $data := site.Data.tx.data }}
+
+<div class="tx2-main tx-explorer-wrapper">
+    <div class="tx-explorer">
+
+        <div class="tx-explorer-details">
+            {{ $current := index $data 2 }}
+            {{ $issued := index $data 3 }}
+            {{ $owners := first 5 (after 4 $data) }}
+            <div class="tx-explorer-id">
+                <div class="form-wrapper">
+                    <div class="form-item select-wrapper">
+                        <select id="explorer-select" name="form_select">
+                            <option value="coin">
+                                coin id
+                            </option>
+                            <option value="transaction">
+                                transaction id
+                            </option>
+                            <option value="user">
+                                user id
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-item input-wrapper">
+                        <input type="exploreid" id="exploreid" name="exploreid" value="{{ $current.S2 }}">
+                    </div>
+                    <div class="form-item button-wrapper">
+                        <button id="explorer-submit">Explore</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tx-explorer-coin tx-explorer-tab" id="explorer-coin">
+                <div class="tx-explorer-coin-label"><h3>Details for COIN %{{$current.S2}}</h3></div>
+                <div class="tx-explorer-qr-img">
+                    {{ $qr := resources.Get "app/qr.svg" }}
+                    {{ $qr.Content | safeHTML }}
+                </div>
+                <div class="tx-explorer-qr-details">
+                    <h3>4231</h3>
+                    <div class="by">
+                        <div class="by-photo">
+                            {{ $u := resources.Get "svg/user.svg" }}
+                            {{ $u.Content | safeHTML }}
+                        </div>
+                        <div class="by-details">
+                            <div class="on">
+                                Issued on {{ $issued.date | dateFormat "Jan 02, 2006 3:04 PM" }} 
+                                by
+                            </div>
+                            <div class="by-name">{{$issued.from}} </div>
+                            <div class="by-uid">@{{$issued.S1}} </div>
+                        </div>
+                    </div>
+                    <div class="by">
+                        <div class="by-photo">
+                            {{ $u.Content | safeHTML }}
+                        </div>
+                        <div class="by-details">
+                            <div class="on">
+                                Currently owned by
+                            </div>
+                            <div class="by-name">{{$current.from}} </div>
+                            <div class="by-uid">@{{$current.S1}} </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tx-explorer-user tx-explorer-tab" id="explorer-user">
+                <div class="tx-explorer-coin-label"><h3>Details for USER @{{$current.S2}}</h3></div>
+                
+                <div class="tx-explorer-qr-img">
+                    {{ $qr := resources.Get "app/qr.svg" }}
+                    <div class="tx-explorer-svg flip-tab active">
+                    {{ $qr.Content | safeHTML }}
+                    </div>
+                    <div class="tx-explorer-photo flip-tab">
+                        {{ $photo := resources.Get "app/user.jpg" }}
+                        {{ $p := $photo.Fill "240x240" }}
+                        <div class="photo-container" style="background-image: url({{$p.Permalink}});"></div>
+                    </div>
+                </div>
+                <div class="tx-explorer-qr-details">
+                    <h2>{{$issued.from}}</h2>
+                    <div class="by">
+                        <div class="by-details">
+                            <div class="on">
+                                <p>Member since {{ $issued.date | dateFormat "Jan 02, 2006 3:04 PM" }}.</p>
+                                <p>{{$issued.from}} is in your network.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tx-explorer-user tx-explorer-tab " id="explorer-transaction">
+                <div class="tx-explorer-coin-label"><h3>Details for TRANSACTION %{{$current.S2}}</h3></div>
+                <div class="tx-explorer-qr-img">
+                    {{ $qr := resources.Get "app/qr.svg" }}
+                    {{ $qr.Content | safeHTML }}
+                </div>
+                <div class="tx-explorer-qr-details">
+                    <h3>1,200 Transferred on {{ $issued.date | dateFormat "Jan 02, 2006 3:04 PM" }} </h3>
+                    <div class="by">
+                        <div class="by-photo">
+                            {{ $u := resources.Get "svg/user.svg" }}
+                            {{ $u.Content | safeHTML }}
+                        </div>
+                        <div class="by-details">
+                            <div class="on">
+                                From user
+                            </div>
+                            <div class="by-name">{{$issued.from}} </div>
+                            <div class="by-uid">@{{$issued.S1}} </div>
+                        </div>
+                    </div>
+                    <div class="by">
+                        <div class="by-photo">
+                            {{ $u.Content | safeHTML }}
+                        </div>
+                        <div class="by-details">
+                            <div class="on">
+                                To user
+                            </div>
+                            <div class="by-name">{{$current.from}} </div>
+                            <div class="by-uid">@{{$current.S1}} </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+<script>
+    document.getElementById('explorer-submit').addEventListener('click', function (event) {
+        event.preventDefault()
+        console.log(this,event)
+        let val = document.getElementById('explorer-select').value;
+        let target = "explorer-" + val;
+        let tabs = document.getElementsByClassName("tx-explorer-tab");
+        for(let i = 0; i < tabs.length; i++){
+            console.log(tabs[i])
+            tabs[i].classList.remove('active');
+        }
+        document.getElementById(target).classList.toggle('active')
+
+    });
+
+    let ft = document.getElementsByClassName("flip-tab");
+    for(let i = 0; i < ft.length; i++){
+        ft[i].addEventListener('click', function (event) {
+            for(let j = 0; j < ft.length; j++){
+                ft[j].classList.toggle('active');
+            }
+        })
+    }
+</script>
+
+{{ end }}

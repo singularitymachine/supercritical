@@ -1,0 +1,3 @@
+{{ $main_options := (dict "targetPath" "css/mockapp.css" "outputStyle" "compressed") }}
+{{ $main_style := resources.Get "app/scss/main.scss" | resources.ExecuteAsTemplate "app_main.scss" . | toCSS $main_options | resources.Minify }}
+<link rel="stylesheet" href="{{ $main_style.RelPermalink }}">

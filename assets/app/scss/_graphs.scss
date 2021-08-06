@@ -1,0 +1,42 @@
+.tx-graphs-wrapper {
+    .tx-graphs {
+        //border: 5px solid cyan;
+        display: flex;
+        flex-direction: row;
+        
+        .tx-graphs-bar {
+            //border: 5px solid red;
+            padding: 40px;
+            flex: 1 0 50%;
+            svg {
+                position: relative;
+            }
+        }
+
+        .tx-graphs-force {
+            padding: 40px;
+            flex: 1 0 50%;
+            //border: 5px solid blue;
+            svg {
+                position: relative;
+            }
+        }
+    }
+    .tx-table-wrapper {
+        //border: 1px solid green;
+        height: auto;
+        min-height: 200px;
+        margin: 0;
+        height: 700px;
+        display: flex;
+        position: relative;
+        max-height: auto;;
+        flex: 0 0 ;
+        table.tx2-table {
+            height: unset!important;
+            align-self: flex-start;
+            //border: 1px solid yellow;
+        }
+    }
+
+}

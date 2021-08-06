@@ -1,0 +1,234 @@
+
+$dark1 : #282a36;
+$dark2 : #44475a;
+$dark3 : #383A59;
+$light : #f8f8f2;
+$blue : #6272a4;
+$cyan : #8be9fd;
+$green : #50fa7b;
+$orange : #ffb86c;
+$pink : #ff79c6;
+$purple : #bd93f9;
+$red : #ff5555;
+$yellow : #f1fa8c;
+
+$title03: "Space Mono" ;
+
+.home__landing {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 50px);
+
+    position: relative;
+    background-color: rgba($dark1,0.4);
+    //border: 10px solid red;
+    button.button {
+        z-index: 200;
+        position: relative;
+        background-color:rgba($cyan, 0.5) ;
+    }
+}
+
+.toc {
+    //border: 1px solid green;
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0;
+    overflow: hidden;
+    .toc-media {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: stretch;
+        background-color: #30323f;
+    }
+    .toc-vid {
+
+    }
+    #sideimg {
+        width: 100%;
+        min-height: 200px;
+    }
+    video {
+        //height: 100%;
+        object-fit: cover;
+    }
+    .toc__body {
+        
+        padding: 0 1.5em;
+    }
+}
+.hero-video-wrapper {
+    //border: 1px solid orange;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 00;
+
+}
+video#hero-video {
+    //border: 1px solid cyan;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    //z-index: 1000;
+  }
+
+  .bot {
+      z-index: 200 ;
+  }
+
+.home__landing--txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__landing  .home__landing--link {
+    //z-index: 200;
+}
+
+.drawer {
+    z-index: 500;
+}
+
+main {
+    /* background-image:   radial-gradient(circle, rgba(0,0,0,0.4) 5%, rgba(0,0,0,0.6) 95%),
+                        url('/images/mesh.jpg');
+    */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    }
+
+
+.header__wrapper.bgcolor__header {
+    display: none;
+    /* background-image:   radial-gradient(circle, rgba(0,0,0,0.4) 5%, rgba(0,0,0,0.6) 95%),
+                            url('/images/mesh.jpg');
+    */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav, .navbar-wrapper, .navbar-collapse, #navMenuMobile {
+    z-index: 300;
+    //border: 1px solid cyan;
+
+}
+img.navbar__logo {
+    height:30px;
+    width: auto;
+}
+
+// .theme__dark #list-main {background-color:lightblack}
+
+.list-section {
+    margin: 1rem;
+}
+
+
+@media only screen and (min-width: 601px) {
+    .hide-desktop {
+        display: none;
+    }
+
+    .show-desktop {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-mobile {
+        display: none;
+    }
+    .show-mobile {
+        display: block;
+    }
+}
+
+/** Fixes overflow on firefox **/
+.search .input {
+    min-width: 0;
+}
+
+
+.button-wrapper {
+    //border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .button {
+        margin: 30px auto;
+        background:$blue;
+        color: white;
+        width: 100%;
+        background:$blue;
+        border-radius:5px;
+        border:0;
+        cursor:pointer;
+        color:white;
+        padding: 10px 30px;
+        transition: all 0.3s;
+        font-size:18px;
+        //font-family: $title03;
+        //font-weight:700;
+        letter-spacing: 2pt;;
+    }
+}
+
+// mobile drawers 
+.theme__dark .drawer
+
+{
+    background-color: $dark1;
+}
+
+.theme__dark .drawer__header
+{
+    background-color: $dark1;
+    a {
+        //color: $cyan;
+        font-family: $title03;
+        font-size: 85%;;
+        //font-weight: bold;
+    }
+}
+
+
+/** Breadcrumbs **/
+nav.breadcrumb {
+    z-index: 100;
+    //border: 1px solid pink;
+}
+
+nav.nav {
+    z-index: 400;
+}
+
+.mid .divider:not(.home){
+    &::before {
+        content: " ";
+        position: absolute;
+        //border: 5px solid yellow;
+        height: 100%;
+        width: 100%;
+        //background-color: pink;
+        //background: url('/svg/a/2.svg');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 800px;
+        background-attachment: fixed;
+        opacity: 15%;
+    }
+}

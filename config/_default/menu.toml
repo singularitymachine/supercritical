@@ -1,0 +1,32 @@
+[[main]]
+  identifier = "about"
+  name = "About"
+  url = "/main"
+  weight = 10
+
+[[main]]
+  identifier = "group"
+  name = "Sigchain Group"
+  url = "#"
+  weight = 20
+
+[[main]]
+  identifier = "partner"
+  name = "Projects"
+  url = "#"
+  weight = 30
+
+[[main]]
+  identifier = "lab"
+  name = "Our Lab"
+  url = "#"
+  weight = 40
+
+
+[[main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact"
+  weight = 50
+
+

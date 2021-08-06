@@ -1,0 +1,21 @@
+#####
+#####
+##### Overwrite from theme 
+##### Clear browser cache and restart Hugo server when changed 
+#####
+#####
+
+dark_active_font_color = "#00a5fc"
+dark_link_color = "#00a5fc"
+dark_link_hover_color = "#00a5fc"
+dark_nav_logo_color = "#FCFCFA"
+dark_nav_menu_color = "#FCFCFA"
+dark_nav_icon_color = "#ccc"
+
+
+light_active_font_color = "#00a5fc"
+light_link_color = "#00a5fc"
+light_link_hover_color = "#00a5fc"
+light_nav_logo_color = "#242729"
+light_nav_menu_color = "#242729"
+light_nav_icon_color = "#535a61"

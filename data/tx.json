@@ -1,0 +1,369 @@
+{   "self": {
+        "name": "McKenzie Satterfield",
+        "id": "80e045d6164b6cffbbd4b0fa5c944f8e5083889d",
+        "S2": "bc76e9373d4c9c19e877b720454ff796bcaccc79b2754d17802b38c292ca622b",
+        "date": "2020-06-12T09:35:37Z"
+    },
+    "data": [
+        {
+            "from": "Fisher, Wehner and Christiansen",
+            "S2": "5658944c84d9cbf3fd978b7f021b5020b59ffde331d7077eaf8f45f77446068c",
+            "S1": "ff9705a5025b2813d9ce3f8ad6e7effabd6459ac",
+            "date": "2020-11-05T01:36:28Z",
+            "to": "Bogan LLC",
+            "debit": null,
+            "credit": 4200
+        },
+        {
+            "from": "Metz-Kerluke",
+            "S2": "1ef56e3b7736ea323dc841100e27817c628c116acf04ac4756704beb956a5cdd",
+            "S1": "9c2ea63ff1165f217dacd9c678604aebd395684c",
+            "date": "2020-11-14T16:14:46Z",
+            "to": "Wunsch, Thiel and Kiehn",
+            "debit": null,
+            "credit": 9400
+        },
+        {
+            "from": "Satterfield LLC",
+            "S2": "f68db469d7e7c052d5d629fa30ac656e961ec13088f66af329b35bfe309bb514",
+            "S1": "bc1028a45a7a17f870691a4aba1f9083f27c14f8",
+            "date": "2021-03-20T05:40:01Z",
+            "to": "Heaney LLC",
+            "debit": 8900,
+            "credit": null
+        },
+        {
+            "from": "Kuhn Group",
+            "S2": "b1149be15322b876ca4081049f096ea82027a30682e4767da1a131bf1c6be083",
+            "S1": "8c50ea2bee60c5c453e567c29480941c3effa3c3",
+            "date": "2021-03-09T10:58:53Z",
+            "to": "Rosenbaum-Schuster",
+            "debit": 800,
+            "credit": null
+        },
+        {
+            "from": "Nikolaus-Bernier",
+            "S2": "583fcc94ad707b61337723a9109d492bc785f89cf986bcb08d7c73d93e34c02e",
+            "S1": "d209deb8f589982942f788c98decb18cc92259ce",
+            "date": "2020-11-18T14:30:38Z",
+            "to": "Fritsch, Labadie and Mante",
+            "debit": null,
+            "credit": 2600
+        },
+        {
+            "from": "Roberts LLC",
+            "S2": "64bf5071d516ef91b31ad1c6d7362e8b32b4cb624b4d94f6d60b1b1b99eb3867",
+            "S1": "8b866e8c7b663c68fc8b34727f3674b50c46a168",
+            "date": "2020-09-29T20:07:35Z",
+            "to": "Osinski-Rice",
+            "debit": null,
+            "credit": 300
+        },
+        {
+            "from": "Weissnat, Romaguera and Ratke",
+            "S2": "fc4ace90f55378fb20cc28540a048d2b6a632f41370bdfc2429413f2c5bc74c4",
+            "S1": "9ef6868d85d02b3b75e3a6de6b020bd040c00139",
+            "date": "2020-05-20T15:58:37Z",
+            "to": "Hegmann-Turcotte",
+            "debit": null,
+            "credit": 3800
+        },
+        {
+            "from": "Daniel Inc",
+            "S2": "405d2b8085a9099e957e917ab82b54c763256074f44a4e41c862ebe6b98b5854",
+            "S1": "7ac61fea4b641c699fc33f5057b858961767901b",
+            "date": "2020-12-15T07:23:59Z",
+            "to": "Watsica Inc",
+            "debit": null,
+            "credit": 3200
+        },
+        {
+            "from": "Haley-Keeling",
+            "S2": "9c7d3f14a233125bc5033a64201da86b0aa4a8bdbf0b55de647406fa5192536c",
+            "S1": "1bc62892346bad84b50e6bd978e463e818796c2b",
+            "date": "2021-04-02T04:17:27Z",
+            "to": "Durgan Group",
+            "debit": 7100,
+            "credit": null
+        },
+        {
+            "from": "Howe, Parker and Graham",
+            "S2": "88d2c1e56b8ab814a1796325d7c8901032cb9694d2bcf78348b3c1a0f29ad8c5",
+            "S1": "96b827f93f3a4d7ee6d9692129e116f446c350ec",
+            "date": "2021-01-03T14:27:51Z",
+            "to": "Brekke-Huel",
+            "debit": 6100,
+            "credit": null
+        },
+        {
+            "from": "Frami Inc",
+            "S2": "a9cabc88d7926528a237e44369d4ba50b9fbf008dad34aca81e773f296cc58e7",
+            "S1": "82816637f57ce8b74d2134dc0d57019f7ca7693d",
+            "date": "2021-04-12T13:47:10Z",
+            "to": "Gorczany Inc",
+            "debit": null,
+            "credit": 3000
+        },
+        {
+            "from": "King-Will",
+            "S2": "bbc803742ba953151dcfda14cc45275baa6cff4ce8b7e16caea6e1b577b30e03",
+            "S1": "78a7ed0ce862f7379202c50e988525f2e83032b3",
+            "date": "2020-12-03T13:42:58Z",
+            "to": "Feest Inc",
+            "debit": 2700,
+            "credit": null
+        },
+        {
+            "from": "Armstrong, Harvey and Haag",
+            "S2": "8001cb5d8fe0930372e640fa7f920d918b311dbbb80b7db5a2f3dca95a9d83cd",
+            "S1": "80ea3ef35b243a3b0412d948d8023744ec9b3d11",
+            "date": "2020-12-07T16:39:35Z",
+            "to": "Pacocha, Nitzsche and Schoen",
+            "debit": 7000,
+            "credit": null
+        },
+        {
+            "from": "Ondricka, Ziemann and Ernser",
+            "S2": "abb8277f41846ae139dab5a7201fbb066845b357f916a928dc7280e41347c80a",
+            "S1": "5d0c5a1ace7c776339f23eae194d30808ddba937",
+            "date": "2020-04-23T20:12:15Z",
+            "to": "Hamill-Bode",
+            "debit": null,
+            "credit": 1000
+        },
+        {
+            "from": "McKenzie-Satterfield",
+            "S2": "bc76e9373d4c9c19e877b720454ff796bcaccc79b2754d17802b38c292ca622b",
+            "S1": "80e045d6164b6cffbbd4b0fa5c944f8e5083889d",
+            "date": "2020-06-12T09:35:37Z",
+            "to": "Ratke Inc",
+            "debit": 2500,
+            "credit": null
+        },
+        {
+            "from": "Goodwin, Quigley and Fritsch",
+            "S2": "bcd24b2686d72431e543d7cf9dc2f7a62f3c718c3200556862e99f9de16baa6e",
+            "S1": "b2300613840803c644d6a7cff199485d9cb7aacd",
+            "date": "2021-02-23T04:10:19Z",
+            "to": "Buckridge-Lindgren",
+            "debit": 4400,
+            "credit": null
+        },
+        {
+            "from": "Renner-Brown",
+            "S2": "d84c04960dcc632fdb3169ccea88614cd329c99678c3dad87756523ccd2d0fec",
+            "S1": "4cff841918a5d14e84c29afbffbb25d4a13beead",
+            "date": "2020-05-15T14:26:36Z",
+            "to": "Wolf, Bednar and Hettinger",
+            "debit": 7000,
+            "credit": null
+        },
+        {
+            "from": "Homenick-Hilpert",
+            "S2": "e2c0a8f3551fcd77b6d913f35da29165b0be6235848f4c6f82f4484b6fcbde50",
+            "S1": "01a1fab9ab418108b4091082f1a081e7b834e812",
+            "date": "2020-05-04T19:28:44Z",
+            "to": "Thiel, Russel and Erdman",
+            "debit": null,
+            "credit": 9000
+        },
+        {
+            "from": "Altenwerth-Schmeler",
+            "S2": "1db9767ebb9b8b2cea5f6a48dcb556bc4e739414c30e7ec3a2a53d2dd6931314",
+            "S1": "8c309296fdc0ec992a7e0e97ae261228afc960eb",
+            "date": "2021-04-19T16:00:59Z",
+            "to": "Halvorson and Sons",
+            "debit": null,
+            "credit": 1900
+        },
+        {
+            "from": "Wisozk and Sons",
+            "S2": "e010a589770a0aacd37995a472ede7d4672ebf375c82d5bb1a2bd10fc551e215",
+            "S1": "bcc530ff626b0a9d9ce94483678d8e75ebc1a1fd",
+            "date": "2020-08-29T01:42:24Z",
+            "to": "Cole Group",
+            "debit": 2700,
+            "credit": null
+        },
+        {
+            "from": "Fisher, Wehner and Christiansen",
+            "S2": "5658944c84d9cbf3fd978b7f021b5020b59ffde331d7077eaf8f45f77446068c",
+            "S1": "ff9705a5025b2813d9ce3f8ad6e7effabd6459ac",
+            "date": "2020-11-05T01:36:28Z",
+            "to": "Bogan LLC",
+            "debit": null,
+            "credit": 4200
+        },
+        {
+            "from": "Metz-Kerluke",
+            "S2": "1ef56e3b7736ea323dc841100e27817c628c116acf04ac4756704beb956a5cdd",
+            "S1": "9c2ea63ff1165f217dacd9c678604aebd395684c",
+            "date": "2020-11-14T16:14:46Z",
+            "to": "Wunsch, Thiel and Kiehn",
+            "debit": null,
+            "credit": 9400
+        },
+        {
+            "from": "Satterfield LLC",
+            "S2": "f68db469d7e7c052d5d629fa30ac656e961ec13088f66af329b35bfe309bb514",
+            "S1": "bc1028a45a7a17f870691a4aba1f9083f27c14f8",
+            "date": "2021-03-20T05:40:01Z",
+            "to": "Heaney LLC",
+            "debit": 8900,
+            "credit": null
+        },
+        {
+            "from": "Kuhn Group",
+            "S2": "b1149be15322b876ca4081049f096ea82027a30682e4767da1a131bf1c6be083",
+            "S1": "8c50ea2bee60c5c453e567c29480941c3effa3c3",
+            "date": "2021-03-09T10:58:53Z",
+            "to": "Rosenbaum-Schuster",
+            "debit": 8100,
+            "credit": null
+        },
+        {
+            "from": "Nikolaus-Bernier",
+            "S2": "583fcc94ad707b61337723a9109d492bc785f89cf986bcb08d7c73d93e34c02e",
+            "S1": "d209deb8f589982942f788c98decb18cc92259ce",
+            "date": "2020-11-18T14:30:38Z",
+            "to": "Fritsch, Labadie and Mante",
+            "debit": null,
+            "credit": 2600
+        },
+        {
+            "from": "Roberts LLC",
+            "S2": "64bf5071d516ef91b31ad1c6d7362e8b32b4cb624b4d94f6d60b1b1b99eb3867",
+            "S1": "8b866e8c7b663c68fc8b34727f3674b50c46a168",
+            "date": "2020-09-29T20:07:35Z",
+            "to": "Osinski-Rice",
+            "debit": null,
+            "credit": 3000
+        },
+        {
+            "from": "Weissnat, Romaguera and Ratke",
+            "S2": "fc4ace90f55378fb20cc28540a048d2b6a632f41370bdfc2429413f2c5bc74c4",
+            "S1": "9ef6868d85d02b3b75e3a6de6b020bd040c00139",
+            "date": "2020-05-20T15:58:37Z",
+            "to": "Hegmann-Turcotte",
+            "debit": null,
+            "credit": 3800
+        },
+        {
+            "from": "Daniel Inc",
+            "S2": "405d2b8085a9099e957e917ab82b54c763256074f44a4e41c862ebe6b98b5854",
+            "S1": "7ac61fea4b641c699fc33f5057b858961767901b",
+            "date": "2020-12-15T07:23:59Z",
+            "to": "Watsica Inc",
+            "debit": null,
+            "credit": 3200
+        },
+        {
+            "from": "Haley-Keeling",
+            "S2": "9c7d3f14a233125bc5033a64201da86b0aa4a8bdbf0b55de647406fa5192536c",
+            "S1": "1bc62892346bad84b50e6bd978e463e818796c2b",
+            "date": "2021-04-02T04:17:27Z",
+            "to": "Durgan Group",
+            "debit": 7100,
+            "credit": null
+        },
+        {
+            "from": "Howe, Parker and Graham",
+            "S2": "88d2c1e56b8ab814a1796325d7c8901032cb9694d2bcf78348b3c1a0f29ad8c5",
+            "S1": "96b827f93f3a4d7ee6d9692129e116f446c350ec",
+            "date": "2021-01-03T14:27:51Z",
+            "to": "Brekke-Huel",
+            "debit": 6100,
+            "credit": null
+        },
+        {
+            "from": "Frami Inc",
+            "S2": "a9cabc88d7926528a237e44369d4ba50b9fbf008dad34aca81e773f296cc58e7",
+            "S1": "82816637f57ce8b74d2134dc0d57019f7ca7693d",
+            "date": "2021-04-12T13:47:10Z",
+            "to": "Gorczany Inc",
+            "debit": null,
+            "credit": 3000
+        },
+        {
+            "from": "King-Will",
+            "S2": "bbc803742ba953151dcfda14cc45275baa6cff4ce8b7e16caea6e1b577b30e03",
+            "S1": "78a7ed0ce862f7379202c50e988525f2e83032b3",
+            "date": "2020-12-03T13:42:58Z",
+            "to": "Feest Inc",
+            "debit": 2700,
+            "credit": null
+        },
+        {
+            "from": "Armstrong, Harvey and Haag",
+            "S2": "8001cb5d8fe0930372e640fa7f920d918b311dbbb80b7db5a2f3dca95a9d83cd",
+            "S1": "80ea3ef35b243a3b0412d948d8023744ec9b3d11",
+            "date": "2020-12-07T16:39:35Z",
+            "to": "Pacocha, Nitzsche and Schoen",
+            "debit": 7000,
+            "credit": null
+        },
+        {
+            "from": "Ondricka, Ziemann and Ernser",
+            "S2": "abb8277f41846ae139dab5a7201fbb066845b357f916a928dc7280e41347c80a",
+            "S1": "5d0c5a1ace7c776339f23eae194d30808ddba937",
+            "date": "2020-04-23T20:12:15Z",
+            "to": "Hamill-Bode",
+            "debit": null,
+            "credit": 1000
+        },
+        {
+            "from": "McKenzie-Satterfield",
+            "S2": "bc76e9373d4c9c19e877b720454ff796bcaccc79b2754d17802b38c292ca622b",
+            "S1": "80e045d6164b6cffbbd4b0fa5c944f8e5083889d",
+            "date": "2020-06-12T09:35:37Z",
+            "to": "Ratke Inc",
+            "debit": 2500,
+            "credit": null
+        },
+        {
+            "from": "Goodwin, Quigley and Fritsch",
+            "S2": "bcd24b2686d72431e543d7cf9dc2f7a62f3c718c3200556862e99f9de16baa6e",
+            "S1": "b2300613840803c644d6a7cff199485d9cb7aacd",
+            "date": "2021-02-23T04:10:19Z",
+            "to": "Buckridge-Lindgren",
+            "debit": 4400,
+            "credit": null
+        },
+        {
+            "from": "Renner-Brown",
+            "S2": "d84c04960dcc632fdb3169ccea88614cd329c99678c3dad87756523ccd2d0fec",
+            "S1": "4cff841918a5d14e84c29afbffbb25d4a13beead",
+            "date": "2020-05-15T14:26:36Z",
+            "to": "Wolf, Bednar and Hettinger",
+            "debit": 7000,
+            "credit": null
+        },
+        {
+            "from": "Homenick-Hilpert",
+            "S2": "e2c0a8f3551fcd77b6d913f35da29165b0be6235848f4c6f82f4484b6fcbde50",
+            "S1": "01a1fab9ab418108b4091082f1a081e7b834e812",
+            "date": "2020-05-04T19:28:44Z",
+            "to": "Thiel, Russel and Erdman",
+            "debit": null,
+            "credit": 9000
+        },
+        {
+            "from": "Altenwerth-Schmeler",
+            "S2": "1db9767ebb9b8b2cea5f6a48dcb556bc4e739414c30e7ec3a2a53d2dd6931314",
+            "S1": "8c309296fdc0ec992a7e0e97ae261228afc960eb",
+            "date": "2021-04-19T16:00:59Z",
+            "to": "Halvorson and Sons",
+            "debit": null,
+            "credit": 1900
+        },
+        {
+            "from": "Wisozk and Sons",
+            "S2": "e010a589770a0aacd37995a472ede7d4672ebf375c82d5bb1a2bd10fc551e215",
+            "S1": "bcc530ff626b0a9d9ce94483678d8e75ebc1a1fd",
+            "date": "2020-08-29T01:42:24Z",
+            "to": "Cole Group",
+            "debit": 2700,
+            "credit": null
+        }
+    ]
+}

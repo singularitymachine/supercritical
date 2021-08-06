@@ -1,0 +1,18 @@
+{{/** Overwrite from theme **/}}
+{{/** Add check if dark switch enabled. Do not display if not. **/}}
+{{/** Add check if github param is configured. Do not display if not. **/}}
+
+<div class="navbar__icons">
+  {{ partial "navbar/icons/select-lang.html" . }}
+  {{ partial "navbar/icons/light-dark-toggle.html" . }}
+  {{ if .Site.Params.enableDarkSwitch }}
+  {{ end }}
+  {{ if .Site.Params.github }}
+  <div class="navbar__icons--icon">
+    <a href="{{ .Site.Params.github }}" title="Github repository" aria-label="Github repository" target="_blank" rel="noreferrer">
+    {{ partial "svgs/github.svg" (dict "width" 22 "height" 22) }}
+    </a>
+  </div>
+  {{ end }}
+</div>
+

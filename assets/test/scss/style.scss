@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+$title01: "Source Sans Pro" ;
+$title03: "Space Mono" ;
+
+$dark1 : #282a36;
+$dark2 : #44475a;
+$dark3 : #383A59;
+$light : #f8f8f2;
+$blue : #6272a4;
+$cyan : #8be9fd;
+$green : #50fa7b;
+$orange : #ffb86c;
+$pink : #ff79c6;
+$purple : #bd93f9;
+$red : #ff5555;
+$yellow : #f1fa8c;
+
+$svg: "{{ (resources.Get "svg/a/2.svg").Permalink }}" ;
+$svgtile: "{{ (resources.Get "svg/logotile2.svg").Permalink }}" ;
+$letterheight: 50px;
+
+
+$test1svg: $blue;
+$test2svg: $dark3;
+
+body.test1 {
+    min-width: 100vh;
+    min-height: 100vh;
+    //position: fixed;
+    background-color: $dark1;
+    overflow:auto;
+    .content {
+        //border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .animation {
+        //border: 1px solid blue;
+        flex: 0 0 auto;
+        z-index: 200;
+        svg {
+            rect, path {
+                fill: $test1svg;
+            }
+        }
+    }
+    .landing-text {
+        //border: 1px solid red;
+        color: $light;
+        flex: 0 0 auto;
+        z-index: 200;
+    }
+    .bg {
+        //border: red 1px solid;
+        width: 100%;
+        max-width: 1000px;
+        position: absolute;
+        height: 90vh;
+        background: url($svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 90%;
+        opacity: 15%;
+    }
+}
+body.test2 {
+    min-width: 100vh;
+    min-height: 100vh;
+    //position: fixed;
+    background-color: #b5b5b5;
+    overflow:auto;
+    //border: 1px solid green;
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .animation {
+        //border: 1px solid blue;
+        flex: 0 0 auto;
+        svg {
+            rect, path {
+                fill: red;
+            }
+        }
+    }
+    .landing-text {
+        //border: 1px solid red;
+        color: $dark2;
+        flex: 0 0 auto;
+    }
+    .bg-test2 {
+        width: 100vw;
+        position:fixed;
+        height: 100vh;
+        
+        background-attachment: fixed;
+        background: url($svgtile);
+        background-repeat: repeat;
+        background-position: center center;
+        background-size: 80%;
+        opacity: 15%;
+    }
+    
+}
+
+.content {
+    //border: 1px solid cyan;
+    width: 80%;
+    //top: 40%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.landing-text {
+    //border: 1px solid blue;
+    flex: 1 0 auto;
+    color: white;
+    text-align: center;
+    font-family: $title03;
+    font-size: 2rem;
+}
+
+.animation {
+    margin: 40px 0 ;
+
+}
+
+
+
+.animation {
+    //border: 1px solid red;;
+    
+    height: $letterheight;
+    flex: 1 0 auto;
+    width: 100%;;
+    padding: 0;
+    overflow: hidden;
+
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__container {
+        width: auto;
+        font-weight: 600;
+        overflow: hidden;
+        height: $letterheight;
+        //border: 1px solid green;
+        &__text {
+            display: inline;
+            float: left;
+            margin: 0;
+        }
+        > ul {
+            padding: 0;;
+            //border: 1px solid blue;
+        }
+        
+        &__list {
+            margin: 0;
+            text-align: center;
+            list-style: none;
+            
+            -webkit-animation-duration: 10s;
+            -webkit-animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            
+            @for $i from 1 to 6 {
+                &.animateletters-#{$i} {
+                    -webkit-animation-name: animateletters-#{$i};
+                    animation-name: animateletters-#{$i};
+                }
+            }
+            
+            &__item {
+                //border: 1px solid yellow;
+                height: $letterheight;
+                margin: 0 12px;
+                svg {
+                    height: $letterheight;
+                    width:  $letterheight;
+                    path {
+                        fill: red;
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// stay should be less than (
+@mixin animateletters($items, $frames, $stay, $name) {
+    //$animating: (100% - $frames * $stay) / ($frames - 1);
+    
+    @at-root {
+        @keyframes #{$name} {
+            @for $i from 0 to $frames {
+                
+                $current-frame: ((($i + 0) * (100/$frames))) * 1%;
+                $next-frame: (($i + 1) * (100/$frames)) - $stay * 1%;
+                
+                #{$current-frame,
+                $next-frame} 
+                {
+                @if ($i ) < ($items) {
+                    transform: translate3d(0, $i * -100% / $items, 0);
+                } @else {
+                    transform: translate3d(0, ($frames - $i ) * -100% / $items, 0);
+                }
+                }
+            
+            }
+            100% {
+                transform: translate3d(0, 0%, 0); }
+            }
+    }
+    
+    
+}
+
+@include animateletters(
+    $name: 'animateletters-4',
+    $items: 4,
+    $frames: 6,
+    $stay: 8
+  );
+
+  @include animateletters(
+    $name: 'animateletters-5',
+    $items: 5,
+    $frames: 8,
+    $stay: 8
+  );
+
+  @include animateletters(
+    $name: 'animateletters-6',
+    $items: 6,
+    $frames: 10,
+    $stay: 4
+  );
+
+  @include animateletters(
+    $name: 'animateletters-3',
+    $items: 3,
+    $frames: 4,
+    $stay: 4
+  );
+
+  @include animateletters(
+    $name: 'animateletters-2',
+    $items: 2,
+    $frames: 2,
+    $stay: 40
+  );
+
+
+// 6 is the number of animation.
+// Here, there are 4 lines :
+
+// 1 to 2
+// 2 to 3
+// 3 to 4
+// 4 to 3
+// 3 to 2
+// 2 to 1
+
+// 6x + 6y = 100 (100% duration)
+
+// HERE :
+// y = 4 -> Animation between two lines
+// x = 12.66 -> Time spent on a line
+
+// You can define a value and calculate the other if you want change speed or the number of lines
+
+.animation {
+    height: 100px;
+    &.header-animation {
+        //border: 1px solid yellow;
+        justify-content: start;
+        margin: 0;
+        
+        height: 100px!important;
+        .animation__container {
+        
+            //border: 1px solid red;
+            height: 200px;
+            margin: 0;
+    
+            &__list {
+            @for $i from 1 to 6 {
+                    &.animateletters-#{$i} {
+                        -webkit-animation-name: none;
+                        animation-name: none;
+                    }
+                }
+            }
+        }
+        svg {
+            height: 2* $letterheight;
+            width:  2* $letterheight;
+            rect, path {
+                fill: #777777;
+            }
+        }
+    }
+
+}
+

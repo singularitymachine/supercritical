@@ -1,0 +1,88 @@
+$enable-navbar: {{ .Param "enableNavbar" }};
+
+$title-font: {{ .Site.Data.font.title_font }};
+$content-font: {{ .Site.Data.font.content_font }};
+
+$dark-active-font-color: {{ .Site.Data.color.dark_active_font_color }};
+$dark-link-color: {{ .Site.Data.color.dark_link_color }};
+$dark-link-hover-color: {{ .Site.Data.color.dark_link_hover_color }};
+$dark-nav-logo-color: {{ .Site.Data.color.dark_nav_logo_color }};
+$dark-nav-menu-color: {{ .Site.Data.color.dark_nav_menu_color }};
+$dark-nav-icon-color: {{ .Site.Data.color.dark_nav_icon_color }};
+
+$light-active-font-color: {{ .Site.Data.color.light_active_font_color }};
+$light-link-color: {{ .Site.Data.color.light_link_color }};
+$light-link-hover-color: {{ .Site.Data.color.light_link_hover_color }};
+$light-nav-logo-color: {{ .Site.Data.color.light_nav_logo_color }};
+$light-nav-menu-color: {{ .Site.Data.color.light_nav_menu_color }};
+$light-nav-icon-color: {{ .Site.Data.color.light_nav_icon_color }};
+
+$dark1 : #282a36;
+$dark2 : #44475a;
+$dark3 : #383A59;
+$dark4: #20222d;
+$light : #f8f8f2;
+
+$light3: #a6a9d9;
+
+$dbg1: #161d31;
+$dbg2: #283046;
+
+$accent: #7367f0;
+
+$blue : #6272a4;
+$cyan : #8be9fd;
+$green : #50fa7b;
+$orange : #ffb86c;
+$pink : #ff79c6;
+$purple : #bd93f9;
+$red : #ff5555;
+$yellow : #f1fa8c;
+$white: #FFFFFF;
+
+$text-font-stack: 'Muli',
+              avenir,
+              'helvetica neue', helvetica,
+              ubuntu,
+              roboto, noto,
+              'segoe ui', arial,
+              sans-serif !default;
+$code-font-stack: Consolas, 
+              Monaco,
+              Menlo,
+              "DejaVu Sans Mono", 
+              "Bitstream Vera Sans Mono", 
+              "Courier New", 
+              "Lucida Console", 
+              "Lucida Sans Typewriter", 
+              "Liberation Mono", 
+              "Nimbus Mono L", 
+              Monaco, 
+              Courier, 
+              monospace !default;
+              
+@import "body";
+@import "fonts";
+@import "typography";
+@import "buttons";
+@import "topnav";
+@import "sidenav";
+@import "table";
+@import "tx2";
+@import "inventory";
+@import "graphs";
+@import "explorer";
+@import "user";
+@import "splash";
+@import "form";
+@import "fab";
+
+
+@import "lightdark";
+
+.spacer {
+    flex: 1 0 auto;
+}
+.hide, .hidden {
+    display: none;
+}

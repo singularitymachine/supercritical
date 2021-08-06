@@ -1,0 +1,175 @@
+.tx2-wrapper .tx2-body .tx2-main.tx-user-wrapper {
+    //border: 10px solid orange;
+    flex: 0 0;
+    width: 100%;
+    .tx-user {
+        display: flex;
+        flex-direction: row;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        //border: 10px solid red;
+        flex: 0 0;
+        width: 100%;
+        height: auto;
+        
+        .tx-user-details {
+            //border: 10px solid blue;
+            width: 100%;
+            height: auto;
+            //flex: 1 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .tx-user-id {
+                //border: 1px solid violet;
+                width: 100%;
+                padding: 12px 24px;
+            }
+            .tx-user-qr-img {
+                //border: 1px solid violet;
+                flex: 0 0;
+                align-self: flex-end;
+                margin: 25px;
+                //background-color: #ffffff;;
+                svg {
+                    fill: #6272a4;
+                }
+                img {
+                    width: 200px;
+                    height: 200px;
+
+
+                }
+            }
+            .tx-user-qr-details {
+                flex: 1 0;
+                //border: 1px solid green;
+                padding: 12px;
+                h2 {
+                    margin: 0 0 0 12px;
+                    font-size: 200%;
+                }
+                .by {
+                    //border: 5px solid orange;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin: 12px 0;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .on {
+                        //border: 5px solid pink;
+                        flex: 1 0 100%;
+                    }
+                    .by-photo {
+                        //border: 5px solid purple;
+                        background-color: rgba(#555555, 0.15);
+                        flex: 0 0 180px;
+                        height: 180px;
+                        width: 180px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        margin-right: 40px;
+                        svg {
+                            position: relative;
+                            //border: 1px solid purple;
+                            width: 80%;
+                            height: 80%;
+                            stroke: #555;
+                        }
+                    }
+                    .by-details {
+                        //border: 5px solid palegreen;
+                        flex: 1 0;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: center;
+                        margin-left: 2px;
+                        .by-name {
+                            //border: 5px solid cyan;
+                            flex: 1 0 100%;
+                            font-weight: bold;
+                            font-size: 200%;
+                        }
+                        .by-uid {
+                            //border: 5px solid forestgreen;
+                            font-size: 150%;
+                            flex: 1 0 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+        .tx-user-list {
+            width: 100%;
+            height: 100px;
+            //border: 10px solid cyan;
+            top: 20px;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: min-content;
+            height: auto;
+            margin-top: 50px;;
+            .tx-table-wrapper {
+                //border: 1px solid green;
+                height: auto;
+                min-height: 200px;
+                margin: 0;
+                height: 700px;
+                display: flex;
+                position: relative;
+                max-height: auto;;
+                flex: 0 0 ;
+                table.tx2-table {
+                    height: unset!important;
+                    align-self: flex-start;
+                    //border: 1px solid yellow;
+                    td.w1 {
+                        max-width: unset;
+                    }
+                    td.pathx {
+                        border: 1px solid orange;
+                        span::before {
+                            content: "";
+                            position: absolute;
+                            z-index: 1;
+                            right: 0;
+                            height: 100%;
+                            border: 1px #ccc solid;
+                         }
+                         span {
+                            padding: 0;
+                            position: relative;
+                          }
+                          span::after { 
+                            content: "";
+                            position: absolute;
+                            z-index: 2;
+                            right: 0;
+                            top: 0;
+                            transform: translateX(50%);
+                            border-radius: 50%;
+                            background: #f0f;
+                            border: 1px #ccc solid;
+                            width: .8em;
+                            height: .8em;
+                         }
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+}

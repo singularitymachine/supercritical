@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+$title01: "Source Sans Pro" ;
+$body01: "Source Sans Pro" ;
+
+$dark1 : #282a36;
+$dark2 : #44475a;
+$dark3 : #383A59;
+$light : #f8f8f2;
+$blue : #6272a4;
+$cyan : #8be9fd;
+$green : #50fa7b;
+$orange : #ffb86c;
+$pink : #ff79c6;
+$purple : #bd93f9;
+$red : #ff5555;
+$yellow : #f1fa8c;
+
+
+body {
+    font-family: $body01;
+    font-weight: 300;
+    font-size: 110%;
+    letter-spacing: .75pt;
+}
+
+button, input, select, textarea {
+    font-family: $body01;
+}

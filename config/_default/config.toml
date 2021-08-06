@@ -1,0 +1,58 @@
+baseURL = "https://serene-hermann-b2e1bd.netlify.app/"
+languageCode = "en-us"
+title = "SigChain Capital"
+
+theme = "github.com/zzossig/hugo-theme-zdoc"
+
+pygmentsCodefences = true
+pygmentsCodeFencesGuesSsyntax = false
+pygmentsStyle = "monokai"
+pygmentsUseClasses = false
+
+copyright = "Copyright Sigchain Capital 2021 All rights reserved."
+
+[markup]
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xhtml = false
+
+[module]
+
+[[module.mounts]]
+  source = "layouts"
+  target = "layouts"
+
+[[module.mounts]]
+  source = "static"
+  target = "static"
+
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "content"
+  target = "content"
+
+[[module.mounts]]
+  source = "archetypes"
+  target = "archetypes"
+
+[[module.mounts]]
+  source = "data"
+  target = "data"
+
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+  section = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true

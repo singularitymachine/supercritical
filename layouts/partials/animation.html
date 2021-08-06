@@ -1,0 +1,11 @@
+<div class="animation__container">
+    {{ $match := (print "svg/" . "/*") }}
+    {{ $letters := resources.Match  $match }}
+    <ul class="animation__container__list  animateletters-{{- len $letters -}}">
+        {{ range $letters }}
+        <li class="animation__container__list__item">
+            {{ .Content | safeHTML }}
+        </li>
+        {{ end }}
+    </ul>
+</div>

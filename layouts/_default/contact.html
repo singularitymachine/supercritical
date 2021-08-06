@@ -1,0 +1,23 @@
+{{ define "header" }}
+  {{ partial "main/header.html" . }}
+{{ end }}
+{{ define "main" }}
+
+<div class="form-container">
+<div class="content-container">
+    {{ .Content }}
+</div>
+
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="not-human" action="/thanks/">      
+    <input name="name" type="text" class="feedback-input" placeholder="name" />   
+    <input name="email" type="text" class="feedback-input" placeholder="email" />
+    <textarea name="text" class="feedback-input" placeholder="message"></textarea>
+    <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="not-human" /></label>
+    </p>
+    
+    <button type="submit">send message</button>
+</form>
+
+</div>
+{{ end }}

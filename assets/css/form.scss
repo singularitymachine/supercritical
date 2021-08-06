@@ -1,0 +1,69 @@
+
+$blue : #6272a4;
+$cyan : #8be9fd;
+$dark1 : #282a36;
+$dark2 : #44475a;
+
+
+body { background: $dark1; }
+form { 
+    max-width:420px; 
+    margin:20px auto; 
+
+    .hidden {
+        display: none;
+    }
+}
+
+.form-container {
+  padding: 20px;
+
+}
+.content-container {
+    max-width:420px; 
+    margin:50px auto; 
+    //border: 1px solid $cyan;
+}
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid $blue;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid $cyan; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+$title03: "Space Mono" ;
+
+[type="submit"] {
+  //font-family: $title03;
+  width: 100%;
+  background:$blue;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size: 18px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  //font-weight:700;
+  letter-spacing: 2pt;;
+}
+[type="submit"]:hover { background:$dark2; }

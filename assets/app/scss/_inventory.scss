@@ -1,0 +1,219 @@
+.inventory {
+
+    .tx2-wrapper {
+        
+        .tx2-body-wrapper {
+    
+        }
+        .tx2-body {
+            
+            .tx2-main {
+                top: 20px;
+                display: flex;
+                //border: 1px solid rgba(0,0,0, 0.25);
+                //display: none;
+                //border: 15px solid hotpink;
+                //margin-top: 50px;
+                position: relative;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: min-content;
+                //margin-top: 80px;;
+                height: auto;
+    
+                .tx-table-wrapper {
+                    //border: 5px solid green;
+                    height: auto;
+                    justify-self: start;
+                    table.tx2-table {
+                        min-height: calc(100vh - 500px);
+                        max-height: 100vh;;
+                        height: fit-content;
+                        td {
+                            padding: 10px;
+                        }
+                        td.expand {
+                            padding: 0 0 0 5px;
+                            button {
+                                padding: 2px;
+                                svg {
+                                    transition: .5s;
+                                    transform: rotate(-90deg);
+                                }
+                                &.open {
+                                    svg {
+                                        transform: rotate(0deg);
+                                        transition: .5s;
+                                    }
+                                }
+                            }
+                        }
+                        tr.balance {
+                            text-align: left;
+                            
+                            .balance-amount {
+                                text-align: right;
+                            }
+                        }
+                        tr.details {
+                            td {
+                                padding: 0;
+                            }
+                            .tx-inventory-details {
+                                //border: 1px solid red;
+                                max-height: 0;
+                                height: 100%;
+                                overflow: hidden;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                transition: 500ms;
+
+                                h2 {
+                                    width: 100%;;
+                                }
+                                .info {
+                                    //border: 1px solid red;
+                                    display: flex;
+                                    flex-direction: row;
+                                    flex: 1 1;
+                                    padding: 12px 0;
+                                    .info-photo {
+                                        display: none;
+                                    }
+                                    .info-name {
+                                        font-size: 120%;
+                                    }
+                                    .info-send {
+                                        button {
+                                            margin: 12px 0;
+                                            padding: .75rem 2rem;
+                                            letter-spacing: 2px;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                    .info-qr {
+                                        margin-right: 24px;
+                                        svg {
+                                            fill: $blue;
+                                        }
+
+                                    }
+                                }
+                            }
+                            
+                            &.open {
+                                
+                            
+                                .tx-inventory-details {
+
+                                    //border: 1px solid blue;
+                                    max-height: 1000px;
+                                    padding-bottom: 50px;
+                                    transition: 500ms;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                .tx-newcredit {
+                    //border: 10px solid cyan;
+                    box-shadow: -10px 0px 10px 0 rgba(0, 0, 0, 0.15);
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    padding: 32px;
+                    .form-wrapper {
+                        //border: 1px solid blue;
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1 0 50%;
+                        .form-item {
+                            //border: 1px solid violet;
+                            display: flex;
+                            flex-direction: row;
+                            margin: 12px 0;
+                            max-width: 500px;
+                            flex-wrap: wrap;
+                            padding: 8px 0;
+                            label {
+                                width: 100%;
+                            }
+                            .name-id {
+                                width: 100%;
+                                font-size: 90%;;
+                                text-align: right;
+                                //border: 1px solid cyan
+                            }
+
+                            button {
+                                width: 100%;;
+                            }
+                        }
+
+                        
+                    }
+                    .form-status {
+                        flex: 1 0 50%;
+
+                        //border: 1px solid cyan;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        &.hidden {
+                            display: none;;
+                        }
+                        .status-details {
+                            //border: 1px solid orange;
+                            flex: 1 0;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            .coin-details, .recipient, .txn {
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                //border: 5px solid green;
+                                width: 100%;;
+                                flex: 1 0 100%;
+                                display: flex;
+                                align-items: flex-start;
+                                align-content: flex-start;
+                                justify-content: flex-start;
+                            }
+                            .coin-label, .recipient-label, .txn-label {
+                                //border: 1px solid red;
+                                flex: 1 0 100%;
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0;
+                            }
+                            .coin-amount, .recipient-id, .txn-id {
+                                width: 100%;
+                                //border: 1px solid yellow;
+                                font-size: 120%;;
+                                margin-bottom: 12px;;
+                            }
+                        }
+                        .status-qr {
+                            flex: 1 0;
+                            //border: 1px solid hotpink;
+                            justify-self: center;
+                            align-self: center;
+                            position: relative;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            svg {
+                                fill: $blue;
+                                margin: 0 auto;
+                                //border: 1px solid red;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

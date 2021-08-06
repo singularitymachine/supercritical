@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ $data := site.Data.tx.data }}
+
+<div class="tx2-main tx-user-wrapper">
+    <div class="tx-user">
+
+        <div class="tx-user-details">
+            {{ $current := index $data 2 }}
+            {{ $issued := index $data 3 }}
+            {{ $owners := first 5 (after 4 $data) }}
+            <div class="tx-user-qr-img">
+                {{ $qr := resources.Get "app/qr.svg" }}
+                {{ $qr.Content | safeHTML }}
+            </div>
+            <div class="tx-user-qr-details">
+                <div class="by">
+                    <div class="by-photo">
+                        {{ $u := resources.Get "svg/user.svg" }}
+                        {{ $u.Content | safeHTML }}
+                    </div>
+                    <div class="by-details">
+                        {{/*  <div class="on">
+                            Issued on {{ $issued.date | dateFormat "Jan 02, 2006 3:04 PM" }} 
+                            by
+                        </div>  */}}
+                        <div class="by-name">{{$current.from}} </div>
+                        <div class="by-uid">@{{$current.S1}} </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{{ end }}

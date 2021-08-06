@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ $.Param "languagedir" | default "ltr" }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+    {{ partial "apptest/styles" . }}
+
+</head>
+
+{{ $themeOptions := slice "light" "dark" }}
+<body id="root" class="theme__{{ index $themeOptions 0 }} {{print .Title|urlize| safeHTMLAttr}}">
+    
+            {{ block "tx2h" .}}
+            <div class="tx2-wrapper">
+                {{ partial "apptest/fullsidebar" . }}
+                <div class="tx2-body-wrapper">
+                    <div class="tx2-body">
+                        <div class="tx2-top">
+                            {{ partial "apptest/nav" . }}
+                        </div>
+            {{ end }}
+            
+            {{ block "main" . }}{{ end }}
+
+            {{ block "tx2f" . }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ if not .IsNode }}
+                {{ partial "apptest/fab" . }}
+            {{ end }}
+</body>
+
+</html>

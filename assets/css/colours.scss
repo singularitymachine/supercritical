@@ -1,0 +1,191 @@
+
+$dark1 : #282a36;
+$dark2 : #44475a;
+$dark3 : #383A59;
+$light : #f8f8f2;
+$blue : #6272a4;
+$cyan : #8be9fd;
+$green : #50fa7b;
+$orange : #ffb86c;
+$pink : #ff79c6;
+$purple : #bd93f9;
+$red : #ff5555;
+$yellow : #f1fa8c;
+
+$bop1: #525574;
+$bop2: #5b6094;
+$bop3: #ABB0DE;
+$bop4: #CED3F4;
+
+$sig: #00a5fc;
+
+$bg: #282a36;
+$bg0: #282A36;
+$bg1: #2C2E3B;
+$bg2: #30323F;
+$bg3: #343643;
+$bg4: #383A47;
+
+.theme__dark .main
+{
+    background-color: $bg1;
+}
+
+.theme__dark #container {
+    color: $light;
+}
+
+// Header in main pages
+.theme__dark .bgcolor__header {
+    background-color: $dark1;
+}
+
+// Breadcrumb in main pages
+.theme__dark .bgcolor__breadcrumb {
+    background-color: $dark1;
+
+}
+
+// base back color
+.theme__dark .mid {
+    background-color: $bg1;
+
+    // this is the left sidebar block
+    #list-menu {
+        background-color: $bg1;
+        
+    }
+}
+
+// middle section on main pages
+.theme__dark #list-main {
+    background-color: $bg0;
+}
+
+// navbar 
+.theme__dark .navbar__wrapper[data-bgimg=false] {
+    background-color: $dark1;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.15);
+}
+
+// footer
+.theme__dark .bot {
+    background-color: $dark1;
+}
+
+
+// h colours
+.theme__light .single__contents {
+    h1, h2, h3, h4, h5, h6 {
+        color: $sig;
+    }
+}
+.theme__dark .single__contents
+{
+    h1, h2, h3, h4, h5, h6 {
+        color: $sig;
+    }
+}
+
+
+// links 
+.theme__dark a {
+    color: $sig;
+    transition: .5s;
+
+    &:hover, &:active, &a:focus {
+        color: $sig;
+        transition: .5s;
+    }
+}
+
+//footer links
+.theme__dark footer a {
+    color: $sig;
+    &:hover, &:active, &a:focus {
+        color: $sig;
+
+    }
+}
+
+// nav / breadcrumb links
+.theme__dark .breadcrumb li a:hover, 
+.theme__dark .breadcrumb li a:active, 
+.theme__dark .breadcrumb li a:focus {
+    color: $cyan;
+
+}
+
+// menu mobile
+.theme__dark .navbar__menu--mobile-item:hover, 
+.theme__dark .navbar__menu--mobile-item:active,
+.theme__dark .navbar__menu--mobile-item:focus {
+    background-color: $dark2;
+
+}
+
+nav.breadcrumb > ol > li {
+    font-weight: bold;
+}
+nav.breadcrumb > ol > li:nth-child(2) > a {
+    font-weight: bold;
+    // color: $orange;
+    
+}
+
+nav.breadcrumb > ol > li:nth-child(3) > span {
+    // color: $cyan;
+}
+
+.theme__dark .menu__title.active {
+    color: $cyan;
+}
+
+.theme__dark .navbar__dropdown--title {
+    background-color: $dark1;
+}
+
+.theme__dark .navbar__collapse {
+    background-color: $dark1;
+}
+
+.theme__dark .menu__title {
+    &:hover {
+        color: $sig;
+    }
+}
+
+.theme__dark .navbar__menu--item a {
+    color: $light;
+    &:hover {
+        color: $sig;
+    }
+}
+.theme__dark .navbar__menu--item.active a {
+        color: $sig;
+}
+
+.theme__dark .toc a:hover, 
+.theme__dark .toc a:active, 
+.theme__dark .toc a:focus {
+    color: $sig;
+}
+
+
+.home__landing button.button {
+    background-color: rgba($sig, 1);
+    border-radius: 0;
+    color: white;
+    text-transform: uppercase;
+    &:hover {
+        background-color: lighten($sig, 10%);
+    }
+}
+
+.theme__dark .logo-light {
+display: none;
+}
+
+.theme__light .logo-dark {
+    display: none;
+}

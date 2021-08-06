@@ -1,0 +1,20 @@
+<div class="fab-container">
+<nav class="fab"  > 
+    
+    <a href="#" class="buttons" tooltip="Issue new Credit">
+        {{ $pc := resources.Get "svg/plus.svg" }}
+        {{ $pc.Content | safeHTML }}
+    </a>
+    
+    <a href="#" class="buttons" tooltip="Send Coin">
+        {{ $ar := resources.Get "svg/arrow-up-right.svg" }}
+        {{ $ar.Content | safeHTML }}
+    </a>
+    
+    <a class="buttons" tooltip="Actions" href="#">
+        {{ $d := resources.Get "svg/dollar-sign.svg" }}
+        {{ $d.Content | safeHTML }}
+
+    </a>
+</nav>
+</div>

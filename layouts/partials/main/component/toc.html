@@ -1,0 +1,45 @@
+<div class="toc">
+  {{ if .Params.enabletoc }}
+  <h6 class="toc__label">{{ i18n "toc-label" }}</h6>
+  <div class="toc__body">
+    {{ .TableOfContents }}
+  </div>
+  {{ else }}
+
+
+  {{ $video := "" }}
+  {{ if isset .Params "videourl" }}
+    {{ $video = .Params.videourl }}
+  {{ end }}
+  
+  <div class="toc-media">
+    {{ if $video }}
+    <div class="toc-vid">
+      <video width="320" height="240" playsinline autoplay muted loop>
+        <source src="{{ $video }}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    {{ end }}
+    {{ if .Params.imageurl }}
+      <style>
+        #sideimg {
+          background-image: url('{{.Params.imageurl}}');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          max-height:100%;
+        }
+      </style>
+    <div id="sideimg">
+    </div>
+  
+      {{ end }}
+
+  </div>
+  
+
+  {{ end }}
+
+  
+  </div>

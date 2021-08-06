@@ -1,0 +1,161 @@
+<div class="tx2-sidebar" id="drawer">
+    <div class="logo-svg-icon">
+        {{ partial "apptest/title.html" . }}
+
+    </div>
+    {{ $self := site.Data.tx.self }}
+
+    <div class="tx2-sidebar-body">
+        <div class="tx2-settings-icon">
+            <div class="settings-svg">
+                {{ $s := resources.Get "svg/settings.svg" }}
+                {{ $x := resources.Get "svg/x.svg" }}
+                <button onclick="opensidebar()">
+                    {{ $s.Content | safeHTML }}
+                    {{ $x.Content | safeHTML }}
+                </button>
+
+            </div>
+            <div class="themetoggle">
+                {{ partial "apptest/light-dark-toggle.html" . }}
+            </div>
+        </div>
+        <div class="sidebar-contents">
+            <div class="sidebar-user">
+                {{/*  <div class="sidebar-user-details">
+                    <div class="user-hello">
+                        <h2>Hello, {{index ( split $self.name " ") 0 }}</h2>
+                    </div>
+                </div>  */}}
+                <div class="sidebar-user-qp">
+                    <div class="sidebar-user-qr">
+                        {{ $qr := resources.Get "app/qr.svg" }}
+                        {{ $qr.Content | safeHTML }}
+                    </div>
+                    {{/*  <div class="sidebar-user-photo">
+                        {{ $u := resources.Get "app/square.jpg" }}
+                        <img src="{{ $u.Permalink }}">
+                    </div>  */}}
+                    <div class="sidebar-user-details">
+                        <div class="user-hello">
+                            <h2>Hello, <span>{{index ( split $self.name " ") 0 }}</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-settings-wrapper">
+            <div class="sidebar-settings">
+                <button class="accordion-btn">Follow</button>
+                <div class="accordion-panel">
+                    <div class="panel-contents">
+                        <p>User id input</p>
+                        <p>Feed id input</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+
+                <button class="accordion-btn">Issue New Credit</button>
+                <div class="accordion-panel">
+                    <div class="panel-contents">
+                        <p>World svg; @...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        </div>
+                    </div>
+
+                <div class="sidebar-divider">
+                </div>
+
+
+                <button class="accordion-btn">Peers</button>
+                <div class="accordion-panel">
+                    <div class="panel-contents">
+                        <p>World svg; @...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        </div>
+                    </div>
+                
+                <button class="accordion-btn">Memberships</button>
+                <div class="accordion-panel">
+                    <div class="panel-contents">
+                        <p>World svg; @...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        <p>Lorem ipsum...</p>
+                        </div>
+                    </div>
+
+                <button class="accordion-btn">Console</button>
+                <div class="accordion-panel">
+                    <div class="panel-contents">
+                    <p>Lorem ipsum...</p>
+                    <p>Lorem ipsum...</p>
+                    <p>Lorem ipsum...</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let drawerstatus = localStorage.getItem('drawer');
+    let drawer = document.getElementById("drawer");
+    
+    if (drawerstatus && drawerstatus == "open" ){
+        if(!drawer.classList.contains("drawer-expand")) {
+            drawer.classList.add("drawer-expand")
+        }
+    } else {
+        drawer.classList.remove("drawer-expand")
+    }
+    let opensidebar = function () {
+        drawer.classList.toggle("drawer-expand");
+        
+        if (drawerstatus && drawerstatus == "open" ){
+          localStorage.setItem('drawer', 'open');
+        } else {
+          localStorage.setItem('drawer', 'close');
+        }
+
+        if(drawer.classList.contains("drawer-expand")) {
+            localStorage.setItem('drawer', 'open');
+        }
+        else {
+          localStorage.setItem('drawer', 'close');
+        }
+    }
+
+
+    let acc = document.getElementsByClassName("accordion-btn");
+    let panels = document.getElementsByClassName("accordion-panel");
+    
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            for (j = 0; j < acc.length; j++) {
+                if(i != j) {
+                    if( acc[j].classList.contains("active") ){
+                        acc[j].classList.remove("active")
+                    }
+                    if( panels[j].classList.contains("active") ){
+                        panels[j].classList.remove("active")
+                    }
+                } else {
+                    acc[j].classList.toggle("active")
+                    panels[i].classList.toggle("active")
+                }
+            }
+        });
+    }
+</script>

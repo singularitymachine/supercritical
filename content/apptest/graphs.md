@@ -1,0 +1,4 @@
+---
+title: Graphs
+layout: graphs
+---

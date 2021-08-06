@@ -1,0 +1,129 @@
+.theme__light {
+    background-color: $light;
+    background-color: scale-color($color: $light, $lightness: 95%);
+    .tx2-sidebar {
+        background-color: mix(white, $dark3, 95%);
+        //background-color: scale-color($color: $light, $lightness: 5%);
+    }
+    .tx2-settings-icon {
+        background-color: mix(white, $dark3, 80%);
+    }
+    button#toggleToLight{
+        display: none;
+    }
+    button#toggleToDark{
+        display: block;
+    }
+    .tx2-top {
+        background-color: mix(white, $dark3, 95%);
+        //background-color: #EBEBEB;
+        //background-color: scale-color($color: $light, $lightness: 5%);
+    }
+    .logo-svg-icon {
+        //background-color: #EBEBEB;
+        //background-color: scale-color($color: $light, $lightness: 5%);
+        background-color: mix(white, $dark3, 95%);
+
+    }
+    .title {
+        color: $dark1
+    }
+    .accordion-btn {
+        //background-color: lighten($color: $dark3, $amount: 5);
+        //background-color: $light3;
+        background-color: mix(white, $dark3, 70%);
+
+        &:hover {
+        background-color: mix(white, $dark3, 85%);
+        
+        }
+        &.active {
+            background-color: mix(white, $dark3, 65%);
+
+            &:hover {
+                background-color: mix(white, $dark3, 85%);
+
+            }
+        }
+
+    }
+
+    .panel-contents {
+        background-color: mix(white, $dark3, 85%);
+    }
+}
+
+.theme__dark {
+    background-color: $dark1;
+    color: $light;
+    button#toggleToDark{
+        display: none;
+    }
+    button#toggleToLight{
+        display: block;
+    }
+
+    .tx2-top {
+        background-color: mix(black, $dark3, 5%);
+    }
+
+    .logo-svg svg {
+        fill:rgba($light, 0.5)
+    }
+    .logo-svg-icon {
+        background-color: mix(black, $dark3, 5%);
+        
+    }
+    .tx2-settings-icon {
+        background-color: mix(black, $dark3, 10%);
+    }
+    input {
+        color: $white
+    }
+    button {
+        background-color: rgba($blue, 0.5);
+            transition: 500ms;
+            color: $white;
+        &:hover {
+            background-color: rgba($blue, 0.15);
+            transition: 500ms;
+        }
+    }
+    select {
+        color: $white;
+    }
+    option {
+        background-color: $dark2;
+    }
+    .title {
+        color: $light
+    }
+
+    .accordion-btn {
+        background-color: darken($color: $dark3, $amount: 5);
+        &:hover {
+            background-color: darken($color: $dark3, $amount: 3);
+        }
+        &.active {
+            background-color: darken($color: $dark3, $amount: 4);
+            &:hover {
+                background-color: darken($color: $dark3, $amount: 3);
+            }
+        }
+
+    }
+
+    .panel-contents {
+        background-color: darken($color: $dark3, $amount: 5);
+    }
+}
+
+button#toggleToLight{
+    background-color: rgba($dark1, 0.5);
+    color: $white;
+}
+
+button#toggleToDark{
+    background-color: rgba($light, 0.5);
+    color: $dark2;
+}

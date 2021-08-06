@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Coustard&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+
+$title01: "Source Sans Pro" ;
+$title03: "Space Mono" ;
+$title04: "Coustard" ;
+$title05: "Fira Mono" ;
+$title06: "JetBrains Mono" ;
+
+$body01: "Source Sans Pro" ;
+
+$dark1 : #282a36;
+$dark2 : #44475a;
+$dark3 : #383A59;
+$light : #f8f8f2;
+$blue : #6272a4;
+$cyan : #8be9fd;
+$green : #50fa7b;
+$orange : #ffb86c;
+$pink : #ff79c6;
+$purple : #bd93f9;
+$red : #ff5555;
+$yellow : #f1fa8c;
+
+
+body {
+    font-family: $body01;
+    font-weight: 300;
+    font-size: 110%;
+    letter-spacing: .75pt;
+}
+
+.header__wrapper .title {
+    font-family: $title03;
+    font-weight: 700;
+}
+
+.home__landing--txt .title {
+    font-family: $title05;
+    color: white;
+
+}
+.home__landing--txt .text {
+    color: white;
+    font-weight: bold;
+}
+
+.theme__dark .single__contents,
+.single__contents
+{
+    h1, h2, h3 {
+        font-family: $title06;
+        //letter-spacing: 3pt;
+    }
+}
+
+.navbar__menu--item>a {
+    font-size: 0.9rem;
+    
+    //font-weight: bold;;
+}
+
+.navbar__logo--text {
+    font-family: $title03;
+    vertical-align:baseline;
+}
+
+.home__landing button.button {
+    //font-family: $title03;
+    //text-transform: uppercase;
+    padding: 1rem 2rem;
+    //font-weight: 800;
+    //font-size: 110%;
+    letter-spacing: 1pt;
+
+}
+
+
+
+    .header__wrapper .title {
+        font-size: 2rem;
+        letter-spacing: 2pt;
+
+    }
+    .single__contents {
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+        
+        h4 {
+            font-size: 1.4rem;
+        }
+        
+        h5 {
+            font-size: 1.3rem;
+        }
+        
+        h6 {
+            font-size: 1.2rem;
+        }
+    }

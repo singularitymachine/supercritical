@@ -1,0 +1,92 @@
+{{ define "main" }}
+{{ $data := site.Data.tx.data }}
+{{ $current := index $data 2 }}
+{{ $issued := index $data 3 }}
+<div class="tx2-main">
+    <div class="tx-table-wrapper">
+        <table class="tx2-table">
+
+            <tr>
+                <td></td>
+                <th>Coin ID</th>
+                <th>Date</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Amount</th>
+            </tr>
+            {{ $balance := 0 }}
+            {{ range $i, $e := first 10 $data }}
+            {{ $balance = add $balance (cond (gt .debit 0) .debit .credit) }}
+            <tr>
+                <td class="expand">
+                    <button data-open="details-{{$i}}" onclick="opendetails(this)">
+                        {{ (resources.Get "svg/chevron-down.svg").Content | safeHTML }}
+                    </button>
+                </td>
+                <td title="@{{.S1}}">%{{ .S1 }}</td>
+                <td>{{ .date | dateFormat "Jan 02, 2006 3:04 PM" }}</td>
+                <td class="w1" title="@{{.S2}}">
+                    <span class="">{{ .from }}</span>
+                    <span class="s2">@{{ .S2}}</span>
+                </td>
+                <td class="w1" title="@{{.S2}}">
+                    <span class="">{{ .to }}</span>
+                    <span class="s2">@{{ .S2}}</span>
+                </td>
+                <td class="number">{{ cond (gt .debit 0) .debit .credit }}</td>
+            </tr>
+            <tr class="details" id="details-{{$i}}">
+                <td></td>
+                <td colspan="5">
+                    <div class="tx-inventory-details">
+                        <h2>{{(cond (gt .debit 0) .debit .credit)}}</h2>
+                        <div class="info">
+                            <div class="info-photo">
+                                {{ $u := resources.Get "svg/user.svg" }}
+                                {{ $u.Content | safeHTML }}
+                            </div>
+                            <div class="info-qr">
+                                {{ $qr := resources.Get "app/qr.svg" }}
+                                {{ $qr.Content | safeHTML }}
+                            </div>
+                            <div class="info-details">
+                                <div class="on">
+                                    Transferred on {{ $issued.date | dateFormat "Jan 02, 2006 3:04 PM" }} 
+                                    from
+                                </div>
+                                <div class="info-name">{{$issued.from}} </div>
+                                <div class="info-uid">@{{$issued.S1}} </div>
+                                <div class="info-send">
+                                    <button class="button" >
+                                        Use Coin
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            {{ end }}
+            <tr class="balance">
+                <td></td>
+                <th colspan="4">Balance</th>
+                <td class="balance-amount">{{$balance}}</td>
+            </tr>
+        </table>
+    </div>
+     <div class="tx-newcredit">
+        {{ partial "apptest/newcredit" . }}
+    </div> 
+</div>
+
+<script>
+let opendetails = function(b){
+    let target = document.getElementById(b.dataset.open);
+    target.classList.toggle("open")
+    b.classList.toggle("open")
+    
+}
+</script>
+
+{{ end }}

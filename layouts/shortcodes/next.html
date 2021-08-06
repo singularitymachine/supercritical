@@ -1,0 +1,11 @@
+{{ $text := .Get 0 | default "Next" }}
+{{ $next := .Page }}
+{{ if .Page.IsNode }}
+    {{ $next = index (sort .Page.Pages) 0 }}
+{{ else }}
+    {{ $next = .Page.PrevInSection }}
+{{ end }}
+
+{{ with $next }}
+<p><a href ="{{.Permalink}}">{{ $text }}</a></p>
+{{ end }}

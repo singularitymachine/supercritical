@@ -1,0 +1,20 @@
+{{ define "tx2h" }}
+<div class="splash">
+{{ end }}
+{{ define "main" }}
+
+<div class="large-logo">
+    {{ $a := resources.Get "svg/a/2.svg" }}
+    <a id="splash-btn" href="tx2/">
+    {{ $a.Content | safeHTML }}
+    </a>
+</div>
+<script>
+    var root = document.getElementById('root');
+    root.classList.add("splash-page")
+
+</script>
+{{ end }}
+{{ define "tx2f" }}
+</div>
+{{ end }}

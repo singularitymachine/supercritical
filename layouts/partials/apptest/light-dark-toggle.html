@@ -1,0 +1,55 @@
+<button id="toggleToDark" class="button" aria-label="Toggle to dark mode">
+  {{ $moon := resources.Get "svg/moon.svg" }}
+  {{ $moon.Content | safeHTML }}
+</button>
+<button id="toggleToLight" class="button" aria-label="Toggle to light mode">
+  {{ $light := resources.Get "svg/sun.svg" }}
+  {{ $light.Content | safeHTML }}
+</button>
+<script>
+  var theme = localStorage.getItem('theme');
+  var toggleToLightBtn = document.getElementById('toggleToLight');
+  var toggleToDarkBtn = document.getElementById('toggleToDark');
+  var root = document.getElementById('root');
+
+  var makeDark = function (){
+    if(!root.classList.contains('theme__dark')) {
+      root.classList.add('theme__dark')
+    }
+    if(root.classList.contains('theme__light')) {
+      root.classList.remove('theme__light')
+    }
+      localStorage.setItem('theme', 'dark');
+  }
+  
+
+  var makeLight = function(){
+    if(!root.classList.contains('theme__light')) {
+      root.classList.add('theme__light')
+    }
+    if(root.classList.contains('theme__dark')) {
+      root.classList.remove('theme__dark')
+    }
+    localStorage.setItem('theme', 'light');
+  }
+  
+
+  if (theme && theme === 'dark') {
+    makeDark()
+  } else {
+    makeLight()
+  }
+
+  
+  toggleToDarkBtn.addEventListener("click", function(){
+    console.log("todark")
+    makeDark();
+  })
+    
+  toggleToLightBtn.addEventListener("click", function(){
+    console.log("tolight")
+    makeLight()
+  })
+    
+  
+</script>

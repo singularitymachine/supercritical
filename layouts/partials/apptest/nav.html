@@ -1,0 +1,37 @@
+<div class="txnav">
+    <div class="txnav-item">
+        <a href="/apptest/tx2/">History</a>
+
+    </div>
+    <div class="txnav-item">
+        <a href="/apptest/inventory/">Wallet</a>
+    </div>
+    <div class="txnav-item">
+        <a href="/apptest/explorer/">Explorer</a>
+    </div>
+    <div class="txnav-item">
+        <a href="/apptest/graphs/">Network Data</a>
+    </div>
+    <div class="txnav-item">
+        <a href="/apptest/graphs/">Graphs</a>
+    </div>
+    <div class="txnav-item spacer">
+    </div>
+    <div class="txnav-item usernav">
+        <div class="user-info">
+            {{ $self := site.Data.tx.self }}
+
+            <div class="user-info-text">
+                <div class="user-info-name">
+                    <a href="/apptest/user/">{{$self.name}} </a>
+                </div>
+                <div class="user-info-id" title="@{{$self.id}}">
+                    @{{$self.id}}</div>
+            </div>
+            <div class="user-info-icon">
+                {{ $u := resources.Get "svg/user.svg" }}
+                <div class="user-svg">{{ $u.Content | safeHTML }}</div>
+            </div>
+        </div>
+    </div>
+</div>

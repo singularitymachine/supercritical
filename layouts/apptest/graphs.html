@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="tx2-main tx-graphs-wrapper">
+  <div class="tx-graphs">
+    <div class="tx-graphs-bar">
+    
+    </div>
+    <div class="tx-graphs-force">
+    
+    </div>  
+  </div>
+</div>
+
+
+
+<script src="//d3js.org/d3.v6.min.js"></script>
+
+{{ $bar := resources.Get "app/js/graphs/bar.js"}}
+<script src="{{$bar.Permalink}}"></script>
+
+{{ $force := resources.Get "app/js/graphs/force.js" | resources.ExecuteAsTemplate "force.js" . }}
+<script src="{{$force.Permalink}}"></script>
+
+
+{{ end }}
