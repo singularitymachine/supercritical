@@ -1,6 +1,6 @@
 baseURL = "https://serene-hermann-b2e1bd.netlify.app/"
 languageCode = "en-us"
-title = "SigChain Capital"
+title = "Super Critical"
 
 theme = "github.com/zzossig/hugo-theme-zdoc"
 
@@ -9,7 +9,7 @@ pygmentsCodeFencesGuesSsyntax = false
 pygmentsStyle = "monokai"
 pygmentsUseClasses = false
 
-copyright = "Copyright Sigchain Capital 2021 All rights reserved."
+copyright = "Copyright Super Critical 2021 All rights reserved."
 
 [markup]
 [markup.goldmark.renderer]
